@@ -1,5 +1,8 @@
 # Qwen3-TTS 本地语音工作台
 
+[![CI](https://github.com/fungxu/qwen3tts-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/fungxu/qwen3tts-lab/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 在 Apple Silicon 上本地跑 **Qwen3-TTS**（Apache 2.0）的完整工作台：预置音色、文字设计音色、参考音克隆，三条链路共用一套 FastAPI 后端和单页 UI。音频与文本全程不出本机。
 
 > 起因是报告《AI 数字人全流程》第三章「造声音」——这里把它落成了可运行的代码。
@@ -79,6 +82,8 @@ qwen3tts-lab/
 ├── download_model.py   # ModelScope 下载器（断点续传 + sha256 清单）
 ├── tts_test.py         # 单次推理冒烟测试
 ├── tts_bench.py        # 精度/速度基准
+├── scripts/check.py    # 静态自检（HTML 结构、.gitignore、前后端接口一致性）
+├── docs/NOTES.md       # 工程笔记：踩坑记录与未解决问题
 └── models/             # 权重（git 忽略，约 12 GB）
 ```
 
@@ -99,6 +104,8 @@ qwen3tts-lab/
 - `sox` 命令行工具未装时 pysox 会在导入时打印警告，12Hz 链路不受影响（只有 25Hz tokenizer 用到）
 - 0.6B 版本体积减半（约 2.5 GB），但**不支持 instruct**，也更容易读错多音字
 
+更多实现细节与踩坑记录见 [docs/NOTES.md](docs/NOTES.md)。
+
 ## 许可
 
-代码 MIT。模型权重为 Qwen 官方 Apache 2.0，使用时请遵守 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) 的条款。
+代码 [MIT](LICENSE)。模型权重为 Qwen 官方 Apache 2.0，使用时请遵守 [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) 的条款。

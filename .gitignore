@@ -1,0 +1,23 @@
+# 模型权重（约 12 GB，从 ModelScope 下载，不入库）
+models/
+
+# 上游源码（setup.sh 会 clone 到 _src/）
+_src/
+
+# 虚拟环境
+.venv/
+__pycache__/
+*.pyc
+
+# 用户生成的音色卡与音频产物
+profiles/
+*.wav
+out-*.wav
+
+# 运行日志
+*.log
+
+# 系统与编辑器
+.DS_Store
+.idea/
+.vscode/

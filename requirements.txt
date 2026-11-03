@@ -1,0 +1,26 @@
+# Qwen3-TTS 12Hz 1.7B 三兄弟（三者架构相同，均为 Apache 2.0）
+# 安装顺序有讲究：torch 先装，避免 transformers 拉到别的版本
+torch==2.8.0
+torchaudio==2.8.0
+transformers==4.57.3
+accelerate==1.12.0
+
+# 推理运行时
+librosa
+soundfile
+einops
+numpy
+onnxruntime
+sox
+
+# Web 服务
+fastapi
+uvicorn[standard]
+python-multipart
+
+# 质检（Whisper 回听，可选）
+faster-whisper
+
+# 构建
+setuptools
+wheel

@@ -1,6 +1,5 @@
 # Qwen3-TTS 本地语音工作台
 
-[![CI](https://github.com/fungxu/qwen3tts-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/fungxu/qwen3tts-lab/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 在 Apple Silicon 上本地跑 **Qwen3-TTS**（Apache 2.0）的完整工作台：预置音色、文字设计音色、参考音克隆，三条链路共用一套 FastAPI 后端和单页 UI。音频与文本全程不出本机。
